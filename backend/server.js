@@ -19,3 +19,6 @@ app.use('/api/reviews', require('./routes/reviews'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+const statsRoute = require('./routes/stats');
+app.use('/api/stats', statsRoute);
